@@ -4,8 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         sh 'npm --version'
-        sh 'eval $(ssh-agent -s)'
-        sh 'ssh-add .ssh/id_rsa'
+        sh 'eval $(ssh-agent -s) &&  ssh-add .ssh/id_rsa'
       }
     }
   }

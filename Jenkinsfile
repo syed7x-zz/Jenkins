@@ -6,7 +6,6 @@ pipeline {
         sh 'npm --version'
         sh 'eval $(ssh-agent -s) && ssh-add ~/.ssh/id_rsa'
         sh 'npm install'
-        sh 'sh "java -version"'
       }
     }
   }
